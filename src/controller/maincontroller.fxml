@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
+   <top>
+      <AnchorPane prefHeight="600.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="600.0" prefWidth="65.0" style="-fx-background-color: #B2B2B8;">
+               <children>
+                  <Button fx:id="exitButton" layoutY="535.0" mnemonicParsing="false" onAction="#exitButtonOnAction" prefHeight="40.0" prefWidth="50.0" text="X">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="resetButton" layoutY="474.0" mnemonicParsing="false" onAction="#resetButtonOnAction" prefHeight="40.0" prefWidth="50.0" text="R">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Button layoutY="28.0" mnemonicParsing="false" onAction="#rot13ButtonOnAction" prefHeight="40.0" prefWidth="50.0" text="ROT13">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="countSym" layoutX="9.0" layoutY="150.0" prefHeight="30.0" prefWidth="46.0" />
+                  <Button layoutY="96.0" mnemonicParsing="false" onAction="#sumButtonOnAction" prefHeight="40.0" prefWidth="50.0" text="SUM">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <MenuBar layoutX="66.0" layoutY="1.0" prefHeight="26.0" prefWidth="534.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="Файл">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#newOnAction" text="Новый" />
+                        <MenuItem mnemonicParsing="false" onAction="#saveOnAction" text="Сохранить" />
+                        <MenuItem mnemonicParsing="false" onAction="#loadOnAction" text="Загрузить" />
+                        <MenuItem mnemonicParsing="false" onAction="#closeOnAction" text="Выйти" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Помощь">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#aboutOnAction" text="О программе" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <TextArea fx:id="fieldText" layoutX="66.0" layoutY="27.0" prefHeight="560.0" prefWidth="534.0" />
+            <HBox layoutX="66.0" layoutY="588.0" prefHeight="14.0" prefWidth="515.0" />
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>
